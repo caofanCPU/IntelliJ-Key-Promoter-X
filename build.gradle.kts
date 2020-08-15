@@ -1,26 +1,13 @@
-buildscript {
-  repositories {
-    mavenCentral()
-    maven("https://oss.sonatype.org/content/repositories/snapshots/")
-    maven("https://dl.bintray.com/jetbrains/intellij-plugin-service")
-
-  }
-  dependencies {
-    classpath("org.jetbrains.intellij.plugins:gradle-intellij-plugin:0.5.0-SNAPSHOT")
-  }
-}
-
 plugins {
+  idea apply true
+  id("org.jetbrains.intellij") version "0.4.21"
   id("java")
 }
-
-apply(plugin = "org.jetbrains.intellij")
 
 java {
   sourceCompatibility = JavaVersion.VERSION_1_8
   targetCompatibility = JavaVersion.VERSION_1_8
 }
-
 
 repositories {
   mavenCentral()
@@ -32,12 +19,12 @@ sourceSets {
     resources.srcDir("resources")
   }
 }
-// tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
 
 configure<org.jetbrains.intellij.IntelliJPluginExtension> {
   version = "LATEST-EAP-SNAPSHOT"
   updateSinceUntilBuild = true
   pluginName = "Key-Promoter-X"
+//  alternativeIdePath = "/home/patrick/build/share/JetBrains/Toolbox/apps/Rider/ch-0/201.7846.1"
 //  alternativeIdePath = "/home/patrick/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/183.5452501"
 //  alternativeIdePath = "/home/patrick/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/191.6605.12"
 //  alternativeIdePath = "/usr/local/IntelliJ/android-studio"
@@ -58,19 +45,24 @@ fun htmlFixer(filename: String): String {
   return ""
 }
 
-version = "2020.1.1"
+version = "2020.2.1"
 
 tasks {
-  named<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
-    changeNotes(htmlFixer("resources/META-INF/change-notes.html"))
-    pluginDescription(htmlFixer("resources/META-INF/description.html"))
-    sinceBuild("191")
+  withType(JavaCompile::class.java) {
+    options.encoding = "UTF-8"
   }
 
-  named<org.jetbrains.intellij.tasks.PublishTask>("publishPlugin") {
+  withType(org.jetbrains.intellij.tasks.PatchPluginXmlTask::class.java) {
+    changeNotes(htmlFixer("resources/META-INF/change-notes.html"))
+    pluginDescription(htmlFixer("resources/META-INF/description.html"))
+    sinceBuild("201")
+  }
+
+  withType(org.jetbrains.intellij.tasks.PublishTask::class.java) {
     if (project.hasProperty("pluginsToken")) {
       token(project.property("pluginsToken"))
     }
+    channels("default")
   }
 }
 

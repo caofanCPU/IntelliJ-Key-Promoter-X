@@ -1,16 +1,31 @@
 ![Downloads Badge](https://img.shields.io/jetbrains/plugin/d/9792-key-promoter-x.svg)
 [![Build Status](https://travis-ci.org/halirutan/IntelliJ-Key-Promoter.svg?branch=KeyPromoterX)](https://travis-ci.org/halirutan/IntelliJ-Key-Promoter)
+![Plugin compatibility](https://github.com/halirutan/IntelliJ-Key-Promoter-X/workflows/Plugin%20compatibility/badge.svg)
 [![Join the chat at https://gitter.im/IntelliJ-Key-Promoter-X/Lobby](https://badges.gitter.im/IntelliJ-Key-Promoter-X/Lobby.svg)](https://gitter.im/IntelliJ-Key-Promoter-X/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![banner](doc/img/kpxBanner.png)](https://github.com/sponsors/halirutan)
 
 ---
-I'm grateful that this project is currently sponsored by [Daniel Babiak](https://github.com/dbabiak), 
-[Christopher Kolstad](https://github.com/chriswk), [Frank Harper](https://github.com/franklinharper), 
+I'm grateful this project is currently sponsored by 
+
+[![CodeStream](https://alt-images.codestream.com/codestream_logo_keypromoterx.png)](https://sponsorlink.codestream.com/?utm_source=jbmarket&amp;utm_campaign=keypromoterx&amp;utm_medium=banner)
+
+and receives $4/month from
+[Daniel Babiak](https://github.com/dbabiak), 
+[Stefan Hagen](https://github.com/sthagen), 
+[Joshua Lückers](https://github.com/JoshuaLuckers),
+[jlash13](https://github.com/jlash13),
+[Mark McCorkle](https://github.com/mccorkle),
+$2/month from
 [Mac Adamarczuk](https://github.com/macalac),
- [Stefan Hagen](https://github.com/sthagen), 
+[Frank Harper](https://github.com/franklinharper), 
+[Christopher Kolstad](https://github.com/chriswk),
 [Søren Berg Glasius](https://github.com/sbglasius),
- and [12 other people](https://github.com/sponsors/halirutan).
+[Sudhir Jonathan](https://github.com/sudhirj),
+[Hasnain Baxamoosa](https://github.com/hbaxamoosa),
+[James Haskell](https://github.com/JamesHaskell),
+[Ryan Quinn](https://github.com/ryanwilliamquinn),
+and $1/month from [21 other people](https://github.com/sponsors/halirutan).
 
 - [Become a GitHub Sponsor and support the Key Promoter X development](https://github.com/sponsors/halirutan)
 
